@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="form">
+            <label id="nameField">
+                <input type="text" name="name" id="name" required>
+            </label>
+            <label id="emailField">
+                <input type="email" name="email" id="email">
+            </label>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+<script>
+    // reference to form 
+  var form= document.getElementById('form')  
+//   add event listerner when form is submitted
+//   prevents the form from autosubmit
+  form.addEventListener('submit', function(event) {
+      event.preventDefault()
+      var name= document.getElementById('name').value 
+      console.log(name)
+      var email= document.getElementById('email').value 
+      console.log(email)
+  })
+</script>
+</body>
+</html>
